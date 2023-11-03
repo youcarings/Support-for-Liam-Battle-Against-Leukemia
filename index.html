@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="./assets/css/f.css">
     <link rel="stylesheet" href="./assets/css/bootstrap.css">
     <link rel="stylesheet" href="//use.fontawesome.com/releases/v5.0.7/css/all.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Fira Sans">
     <link rel="stylesheet" href="./assets/css/smooth.css">
     <link rel="stylesheet" href="./assets/css/scroll.css">
     <title>fundraiser by Isaac Marcel</title>
@@ -44,7 +45,7 @@
     <section class="overAll">
         <div class="navItem">
             <i class="fas fa-search p-2 dbtn nav-btn openBtn" onclick="openSearch()"></i>
-            <a href="https://www.gofundme.com/c/youcaring"><img class="img-fluid logoImg" src="./assets/img/logo-2.png" alt=""></a>
+            <a href="https://www.gofundme.com/c/youcaring"><img class="img-fluid logoImg" src="./assets/img/YouCaring.png" alt=""></a>
             <a class="nav-sign" href="https://www.gofundme.com/c/youcaring">Sign in</a>
         </div>
     </section>
@@ -93,6 +94,13 @@
             </div>
         </div>
     </div>
+    <script>
+         const copyBtn = document.querySelector('.sharebtn');
+    copyBtn.onclick = e => {
+        navigator.clipboard.writeText(url.value);
+        document.querySelector('.copied').style.display = "block";
+    }
+    </script>
 
 
     <!-- <div id="myModal" class="modal2">
@@ -145,8 +153,9 @@
             <div class="row">
                 <div class="col-md-8">
                     <div>
-                        <img class="img-fluid camImg" src="./assets/img/IMG-20230907-WA0000.jpg" alt="">
-                        <h1>Support for Liam's Battle Against Leukemia</h1>
+                        <img class="img-fluid camImg" src="./assets/img/Blank 8 Grids Collage.png" alt="">
+                        
+                        <h1 class="gg">Support for Liam's Battle Against Leukemia</h1>
                     </div>
                 </div>
                 <div class="col-md-4">
@@ -154,12 +163,12 @@
                         <span>
                             <h6 style="font-weight: bold;">$</h6>
                         </span>
-                        <h6 id="amoraised" class="amountRaised">3000</h6>
+                        <h6 id="amoraised" class="amountRaised">5,100</h6>
                         <h6 class="usd">raised of</h6>
                         <span class="amountRequiired">
                             <h6>$</h6>
                         </span>
-                        <h6 id="amoneeded">60000</h6>
+                        <h6 id="amoneeded">45,000 goal</h6>
                     </div>
                     <div class="progress" style="height: 10px;">
                         <div class="progress-bar" role="progressbar" style="width: 10%;" aria-valuenow="25"
@@ -176,6 +185,7 @@
                         <div>
                             <a class="leadinglink" href="https://paystack.com/pay/oqsf7gro2z"><button id="myBtn"
                                     class="donateButt form-control">Donate</button></a>
+
                         </div>
                     </div>
                 </div>
@@ -201,7 +211,11 @@
                 <div class="col-md-8">
                     <div class="nameProfile">
                         <img src="./assets/img/profile-icon.png" alt="">
-                        <h6>Isaac Marcel is organizing this fundraiser</h6>
+                        <img class="unitedimg" src="./assets/img/Unitedflag.png" alt="">
+                        <h6>Gaye Hirsch</h6> 
+                    </div>
+                    <div class="identify">
+                        <h6>Identity Verified</h6>
                         <img class="verified" src="./assets/img/verified.png" alt="">
                     </div>
                     <hr>
@@ -277,11 +291,11 @@
                 <div class="col-md-8">
                     <div class="contactDetails">
                         <img class="img-fluid" src="./assets/img/profile-icon.png" alt="">
-                        <h6>Isaac Marcel</h6>
+                        <h6>Gaye Hirsch</h6>
                     </div>
                     <div class="DetailsContact">
                         <button type="button" class="contactbtn trigger">Contact</button>
-                        <h6>New York</h6>
+                        <h6>Los Angeles, CA</h6>
                     </div>
                 </div>
             </div>
@@ -392,10 +406,10 @@
     closeButton.addEventListener("click", toggleModal);
     window.addEventListener("click", windowOnClick);
 
-    const priceDiv = document.querySelector('#amoraised');
-    priceDiv.textContent = (+priceDiv.textContent).toLocaleString('en-US');
-    const amountDiv = document.querySelector('#amoneeded');
-    amountDiv.textContent = (+amountDiv.textContent).toLocaleString('en-US');
+    // const priceDiv = document.querySelector('#amoraised');
+    // priceDiv.textContent = (+priceDiv.textContent).toLocaleString('en-US');
+    // const amountDiv = document.querySelector('#amoneeded');
+    // amountDiv.textContent = (+amountDiv.textContent).toLocaleString('en-US');
 
     function openSearch() {
         document.getElementById("myOverlay").style.display = "block";
@@ -424,11 +438,6 @@
         }
     }
 
-    const copyBtn = document.querySelector('.sharebtn');
-    copyBtn.onclick = e => {
-        navigator.clipboard.writeText(url.value);
-        document.querySelector('.copied').style.display = "block";
-    }
     defaultValue = document.querySelector('.donate-amount');
     defaultValue.value = 50;
     defaultValue.style.color = "#000000";
